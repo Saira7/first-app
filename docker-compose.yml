@@ -1,0 +1,13 @@
+name: First App
+
+services:
+    app:
+     image: sairaalvi123/firstapp:latest
+     ports:
+       - 5000:5000
+    volumes:
+        - .:/app // This is the volume that maps the current directory to the /app directory in the container
+        - /app/node_modules // This is the volume that maps the node_modules directory in the container to the /app/node_modules directory in the host machine
+    db:
+     image: mongo:latest
+    
